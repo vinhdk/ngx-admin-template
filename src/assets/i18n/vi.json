@@ -1,0 +1,10 @@
+{
+    "button": {
+        "add": "Thêm mới",
+        "detail": "Chi tiết",
+        "delete": "Xóa",
+        "update": "Cập nhật",
+        "yes": "Xác nhận",
+        "no": "Đóng"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "button": {
+        "add": "Add",
+        "detail": "Detail",
+        "delete": "Delete",
+        "update": "Update",
+        "yes": "Accept",
+        "no": "Close"
+    }
+}

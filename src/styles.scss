@@ -1,0 +1,277 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/@swimlane/ngx-datatable/index.scss';
+@import '../node_modules/@swimlane/ngx-datatable/themes/material.scss';
+@import '../node_modules/@swimlane/ngx-datatable/assets/icons.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=vietnamese');
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgba(91, 154, 213, 0.185);
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #528fc070;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #528ec0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.box-shadow-basic {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.ngx-datatable.material.single-selection .datatable-body-row.active,
+.ngx-datatable.material.single-selection .datatable-body-row.active .datatable-row-group,
+.ngx-datatable.material.multi-selection .datatable-body-row.active,
+.ngx-datatable.material.multi-selection .datatable-body-row.active .datatable-row-group,
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active,
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active .datatable-row-group {
+    background-color: antiquewhite;
+    color: #fff;
+}
+
+.ngx-datatable.material.single-selection .datatable-body-row.active:hover,
+.ngx-datatable.material.single-selection .datatable-body-row.active:hover .datatable-row-group,
+.ngx-datatable.material.multi-selection .datatable-body-row.active:hover,
+.ngx-datatable.material.multi-selection .datatable-body-row.active:hover .datatable-row-group,
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active:hover,
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active:hover .datatable-row-group {
+    background-color: bisque;
+    color: #fff;
+}
+
+ngx-datatable {
+    border: 1px solid lightgrey;
+    i {
+        cursor: pointer;
+        margin-right: 5px;
+    }
+    datatable-body.datatable-body {
+        height: 50vh !important;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+@for $size from 1 through 100 {
+    .h-#{$size}-vh {
+        height: $size + vh;
+    }
+    .h-per-#{$size} {
+        height: percentage($number: $size/100);
+    }
+    .w-#{$size}-vw {
+        width: $size + vw;
+    }
+    .w-per-#{$size} {
+        width: percentage($number: $size/100);
+    }
+    .mh-#{$size} {
+        height: $size + vh;
+    }
+    .mh-per-#{$size} {
+        height: percentage($number: $size/100);
+    }
+    .mw-#{$size} {
+        height: $size + vw;
+    }
+    .mw-per-#{$size} {
+        width: percentage($number: $size/100);
+    }
+    .mt-per-#{$size} {
+        margin-top: percentage($number: $size/100);
+    }
+    .mb-per-#{$size} {
+        margin-bottom: percentage($number: $size/100);
+    }
+    .ml-per-#{$size} {
+        margin-left: percentage($number: $size/100);
+    }
+    .mr-per-#{$size} {
+        margin-right: percentage($number: $size/100);
+    }
+    .mx-per-#{$size} {
+        margin-right: percentage($number: $size/100);
+        margin-left: percentage($number: $size/100);
+    }
+    .my-per-#{$size} {
+        margin-bottom: percentage($number: $size/100);
+        margin-top: percentage($number: $size/100);
+    }
+    .bot-#{$size} {
+        bottom: $size + vh;
+    }
+    .top-#{$size} {
+        top: $size + vh;
+    }
+    .left-#{$size} {
+        left: $size + vw;
+    }
+    .right-#{$size} {
+        right: $size + vw;
+    }
+    .bot-per-#{$size} {
+        bottom: percentage($number: $size/100);
+    }
+    .top-per-#{$size} {
+        top: percentage($number: $size/100);
+    }
+    .left-per-#{$size} {
+        left: percentage($number: $size/100);
+    }
+    .right-per-#{$size} {
+        right: percentage($number: $size/100);
+    }
+}
+
+@for $size from 1 through 100 {
+    .sub-h-#{$size} {
+        height: -$size + vh;
+    }
+    .sub-h-per-#{$size} {
+        height: percentage($number: -$size/100);
+    }
+    .sub-w-#{$size} {
+        height: -$size + vw;
+    }
+    .sub-w-per-#{$size} {
+        width: percentage($number: -$size/100);
+    }
+    .sub-mh-#{$size} {
+        height: -$size + vh;
+    }
+    .sub-mh-per-#{$size} {
+        height: percentage($number: -$size/100);
+    }
+    .sub-mw-#{$size} {
+        height: -$size + vw;
+    }
+    .sub-mw-per-#{$size} {
+        width: percentage($number: -$size/100);
+    }
+    .sub-mt-per-#{$size} {
+        margin-top: percentage($number: -$size/100);
+    }
+    .sub-mb-per-#{$size} {
+        margin-bottom: percentage($number: -$size/100);
+    }
+    .sub-ml-per-#{$size} {
+        margin-left: percentage($number: -$size/100);
+    }
+    .sub-mr-per-#{$size} {
+        margin-right: percentage($number: -$size/100);
+    }
+    .sub-mx-per-#{$size} {
+        margin-right: percentage($number: -$size/100);
+        margin-left: percentage($number: -$size/100);
+    }
+    .sub-my-per-#{$size} {
+        margin-bottom: percentage($number: -$size/100);
+        margin-top: percentage($number: -$size/100);
+    }
+    .sub-bot-#{$size} {
+        bottom: -$size + vh;
+    }
+    .sub-top-#{$size} {
+        top: -$size + vh;
+    }
+    .sub-left-#{$size} {
+        left: -$size + vw;
+    }
+    .sub-right-#{$size} {
+        right: -$size + vw;
+    }
+    .sub-bot-per-#{$size} {
+        bottom: percentage($number: -$size/100);
+    }
+    .sub-top-per-#{$size} {
+        top: percentage($number: -$size/100);
+    }
+    .sub-left-per-#{$size} {
+        left: percentage($number: -$size/100);
+    }
+    .sub-right-per-#{$size} {
+        right: percentage($number: -$size/100);
+    }
+}
+
+@for $size from 1 through 10 {
+    .border-#{$size} {
+        border: ($size + px) solid #bbbfc5;
+    }
+    .border-top-#{$size} {
+        border-top: ($size + px) solid #bbbfc5;
+    }
+    .border-bottom-#{$size} {
+        border-bottom: ($size + px) solid #bbbfc5;
+    }
+    .border-left-#{$size} {
+        border-left: ($size + px) solid #bbbfc5;
+    }
+    .border-right-#{$size} {
+        border-right: ($size + px) solid #bbbfc5;
+    }
+    .border-top-bottom-#{$size} {
+        border-top: ($size + px) solid #bbbfc5;
+        border-bottom: ($size + px) solid #bbbfc5;
+    }
+    .border-top-left-#{$size} {
+        border-top: ($size + px) solid #bbbfc5;
+        border-left: ($size + px) solid #bbbfc5;
+    }
+    .border-top-right-#{$size} {
+        border-top: ($size + px) solid #bbbfc5;
+        border-right: ($size + px) solid #bbbfc5;
+    }
+    .border-top-bottom-left-#{$size} {
+        border-top: ($size + px) solid #bbbfc5;
+        border-bottom: ($size + px) solid #bbbfc5;
+        border-left: ($size + px) solid #bbbfc5;
+    }
+    .border-top-bottom-right-#{$size} {
+        border-top: ($size + px) solid #bbbfc5;
+        border-bottom: ($size + px) solid #bbbfc5;
+        border-right: ($size + px) solid #bbbfc5;
+    }
+    .border-bottom-left-#{$size} {
+        border-bottom: ($size + px) solid #bbbfc5;
+        border-left: ($size + px) solid #bbbfc5;
+    }
+    .border-bottom-right-#{$size} {
+        border-bottom: ($size + px) solid #bbbfc5;
+        border-right: ($size + px) solid #bbbfc5;
+    }
+    .border-left-right-#{$size} {
+        border-right: ($size + px) solid #bbbfc5;
+        border-left: ($size + px) solid #bbbfc5;
+    }
+}
+
+@for $size from 1 through 100 {
+    .border-radius-#{$size} {
+        border-radius: $size + px;
+    }
+    .border-radius-per-#{$size} {
+        border-radius: percentage($number: -$size/100);
+    }
+}

@@ -1,0 +1,17 @@
+<div class="w-per-100">
+    <span *ngIf="home">
+        <button nbButton size="small" (click)="router(home)" nbTooltipTrigger="hover" nbTooltip="{{home.label}}" nbTooltipStatus="primary">
+            <span><nb-icon [icon]="home.icon">
+                </nb-icon>
+            </span>
+        </button>
+    </span>
+    <span *ngFor="let item of menu">
+        <span class="mx-1"><nb-icon icon="arrow-ios-forward-outline"></nb-icon></span>
+        <button nbButton size="small" (click)="router(item)" nbTooltipTrigger="hover" nbTooltip="{{item.label}}" nbTooltipStatus="primary">
+            <span><nb-icon [icon]="item.icon">
+                </nb-icon>
+            </span>
+        </button>
+    </span>
+</div>
